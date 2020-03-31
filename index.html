@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COVID-19</title>
+        <meta charset="utf-8">
+        <script src="funciones.js"></script>
+        <script src="Build/Cesium/Cesium.js"></script>
+        <link href="Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+      
+    </head>
+    <body>  
+        <label>CONTAGIOS TOTALES HASTA EL DIA </label><input type="text" id="dia"/><label> DE MARZO DEL 2020</label>
+        <input type="button" value="MOSTRAR" onclick="alert(contagios());"/><br> <br>
+        <input type="button" value="BORRAR ANIMACION" onclick="viewer.dataSources.add(vacio);"/><br> <br>
+        <div id="cesiumViewer"></div>   
+    <script>
+        let viewer=new Cesium.Viewer("cesiumViewer");
+        let czml= new Cesium.CzmlDataSource();
+        let vacio= new Cesium.CzmlDataSource();
+        let elements=czml.load("escena.czml");
+        vacio.load("escena2.czml");
+        viewer.dataSources.add(czml);
+        viewer.zoomTo(elements);
+   </script>
+   
+   </body>
+</html>

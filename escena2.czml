@@ -1,0 +1,32 @@
+[
+    {
+        "id":"document",
+        "name":"ejemplo czml",
+        "version":"1.0",
+        "clock":{
+            "interval":"2020-03-06T00:00:00Z/2020-03-28T23:00:00Z",
+            "currentTime":"2020-03-06T00:00:00Z",
+            "multiplier":50000
+
+        }        
+    },
+     {
+        "id":"shape0",
+        "name":"Puerto lopez Colombia",
+        "position":{
+            "cartographicDegrees":[-72.9584671, 4.085013 , 0]
+        },
+         "ellipse" : {
+        "semiMinorAxis" : 1200000,
+        "semiMajorAxis" : 900000,
+        "height" : 100000,
+        "material" : {
+            "solidColor" : {
+                "color" : {
+                    "rgba" : [255, 255, 255, 0]
+                    }
+                }
+            }
+        }
+    }
+]
